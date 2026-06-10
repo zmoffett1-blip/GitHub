@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zach Moffett | Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #1f2937;
+            color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .hero {
+            padding: 80px 40px;
+            background: #f3f4f6;
+            text-align: center;
+        }
+        section {
+            padding: 60px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li {
+            background: #e5e7eb;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .resume-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .resume-actions a {
+            display: inline-block;
+            margin-right: 12px;
+            padding: 10px 14px;
+            background: #1f2937;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Zach Moffett</h1>
+        </div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#resume">Resume</a>
+            <a href="#skills">Skills</a>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <h2>Welcome to Zach Moffett's Portfolio</h2>
+        <p>Hi, I'm a data enthusiast who loves turning data into insights and building analytical solutions.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a data science professional with a passion for discovering patterns, creating models, and communicating results clearly.
+            I enjoy working with data, solving problems, and using analytics to support smarter decisions.
+        </p>
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <div class="resume-card">
+            <p>You can download my full resume below.</p>
+            <div class="resume-actions">
+                <a href="New%20Resume%203-18-24.docx" download="Zach_Moffett_Resume.docx" target="_blank">Download Resume (DOCX)</a>
+                <a href="New%20Resume%203-18-24.docx" target="_blank">Open in new tab</a>
+            </div>
+            <p style="margin-top:12px;color:#444;font-size:0.95rem;">
+                If you'd like the resume text embedded on the page, paste the content here or tell me which sections to display (e.g., Experience, Education).
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>Python</li>
+            <li>Machine Learning</li>
+            <li>Data Visualization</li>
+            <li>Statistics</li>
+            <li>Data Cleaning</li>
+            <li>SQL</li>
+        </ul>
+    </section>
+</body>
+</html>
