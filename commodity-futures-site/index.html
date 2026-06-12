@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commodex Futures</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <h1>Commodex Futures</h1>
+            <p>Commodity futures market insights and trade planning.</p>
+        </div>
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#markets">Markets</a>
+            <a href="#trade">Trade</a>
+            <a href="#resources">Resources</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div>
+                <h2>Trade smarter across oil, metals, agriculture, and energy.</h2>
+                <p>Track real-time price drivers, compare contract expiries, and prototype your futures strategy.</p>
+                <a class="primary-button" href="#trade">Start a simulated trade</a>
+            </div>
+            <div class="hero-card">
+                <h3>Today's top commodity themes</h3>
+                <ul>
+                    <li>Crude oil supply outlook</li>
+                    <li>Gold safe-haven demand</li>
+                    <li>Corn weather risk</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="overview" class="section panel-panel">
+            <h2>Commodity futures overview</h2>
+            <p>Commodity futures let traders lock in prices for physical goods. This site helps you explore market structure, contract details, and potential strategy ideas for major commodity classes.</p>
+            <div class="feature-grid">
+                <article>
+                    <h3>Market structure</h3>
+                    <p>Understand how contracts work, margin requirements, and settlement conventions across futures exchanges.</p>
+                </article>
+                <article>
+                    <h3>Risk management</h3>
+                    <p>Compare trending and hedging approaches while keeping position sizing and leverage top of mind.</p>
+                </article>
+                <article>
+                    <h3>Data-driven ideas</h3>
+                    <p>Monitor supply/demand drivers, macro catalysts, and seasonal patterns that affect futures pricing.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="markets" class="section market-section">
+            <h2>Live market snapshots</h2>
+            <div class="market-grid" id="market-grid">
+                <article class="market-card">
+                    <h3>Crude Oil</h3>
+                    <p class="price" data-symbol="CL">Loading...</p>
+                    <p>Key contract: WTI June</p>
+                </article>
+                <article class="market-card">
+                    <h3>Gold</h3>
+                    <p class="price" data-symbol="GC">Loading...</p>
+                    <p>Key contract: COMEX December</p>
+                </article>
+                <article class="market-card">
+                    <h3>Corn</h3>
+                    <p class="price" data-symbol="ZC">Loading...</p>
+                    <p>Key contract: CBOT July</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="trade" class="section trade-section">
+            <h2>Simulated futures trade</h2>
+            <form id="trade-form" class="trade-form">
+                <label>
+                    Commodity
+                    <select id="commodity-select">
+                        <option value="CL">Crude Oil (CL)</option>
+                        <option value="GC">Gold (GC)</option>
+                        <option value="ZC">Corn (ZC)</option>
+                    </select>
+                </label>
+                <label>
+                    Contract price
+                    <input id="contract-price" type="number" value="100" step="0.01" />
+                </label>
+                <label>
+                    Quantity (contracts)
+                    <input id="quantity" type="number" value="1" min="1" />
+                </label>
+                <label>
+                    Trade direction
+                    <select id="direction-select">
+                        <option value="long">Long</option>
+                        <option value="short">Short</option>
+                    </select>
+                </label>
+                <button type="submit">Estimate P/L</button>
+            </form>
+            <div id="trade-result" class="trade-result">
+                <h3>Trade result</h3>
+                <p>Select a commodity and enter the contract details to estimate profit and loss at a target price.</p>
+            </div>
+        </section>
+
+        <section id="resources" class="section resources-section">
+            <h2>Resources for futures traders</h2>
+            <ul class="resource-list">
+                <li>Exchange specifications: CME, ICE, CBOT</li>
+                <li>Margin & leverage calculator concept</li>
+                <li>Seasonality and macro catalyst notes</li>
+                <li>Strategy ideas: spread trading, roll management</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Commodex Futures · Demo website only · Not investment advice.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
