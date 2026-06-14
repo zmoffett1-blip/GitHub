@@ -6,32 +6,45 @@
     <title>Zach Moffett | Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             line-height: 1.6;
+            background: linear-gradient(135deg, #0f172a 0%, #1a202c 100%);
+            color: #e2e8f0;
         }
         header {
-            background: #1f2937;
+            background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
             color: #fff;
             padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 2px solid #06b6d4;
+            box-shadow: 0 2px 10px rgba(6, 182, 212, 0.1);
         }
         header nav a {
-            color: #fff;
+            color: #e2e8f0;
             text-decoration: none;
             margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        header nav a:hover {
+            color: #06b6d4;
         }
         .hero {
             padding: 80px 40px;
-            background: #f3f4f6;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             text-align: center;
+            border-bottom: 1px solid rgba(6, 182, 212, 0.2);
         }
         section {
             padding: 60px 40px;
             max-width: 900px;
             margin: 0 auto;
+        }
+        h2 {
+            color: #06b6d4;
         }
         .skills-list {
             display: grid;
@@ -41,25 +54,111 @@
             padding: 0;
         }
         .skills-list li {
-            background: #e5e7eb;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
             padding: 15px;
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
+            border: 1px solid #06b6d4;
+            color: #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .skills-list li:hover {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            color: #0f172a;
+            transform: translateY(-4px);
         }
         .resume-card {
-            background: #fff;
-            border: 1px solid #e5e7eb;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border: 1px solid #06b6d4;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
         }
         .resume-actions a {
             display: inline-block;
             margin-right: 12px;
             padding: 10px 14px;
-            background: #1f2937;
-            color: #fff;
+            background: #06b6d4;
+            color: #0f172a;
             text-decoration: none;
             border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .resume-actions a:hover {
+            background: #0891b2;
+            transform: translateY(-2px);
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .project-card {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border: 1px solid #06b6d4;
+            padding: 25px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
+            border-color: #0891b2;
+        }
+        .project-card h3 {
+            color: #06b6d4;
+            margin-top: 0;
+        }
+        .project-tech {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background: #06b6d4;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .project-link:hover {
+            background: #0891b2;
+            transform: translateX(4px);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .contact-item {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border: 1px solid #06b6d4;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .contact-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(6, 182, 212, 0.15);
+            border-color: #0891b2;
+        }
+        .contact-item h3 {
+            color: #06b6d4;
+            margin-top: 0;
+        }
+        .contact-item a {
+            color: #06b6d4;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-item a:hover {
+            color: #0891b2;
         }
     </style>
 </head>
@@ -72,6 +171,8 @@
             <a href="#hero">Home</a>
             <a href="#about">About</a>
             <a href="#resume">Resume</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
             <a href="#skills">Skills</a>
         </nav>
     </header>
@@ -100,6 +201,41 @@
             <p style="margin-top:12px;color:#444;font-size:0.95rem;">
                 If you'd like the resume text embedded on the page, paste the content here or tell me which sections to display (e.g., Experience, Education).
             </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <!-- Add your projects here -->
+            <div class="project-card">
+                <h3>Project Name</h3>
+                <p class="project-tech">Technologies: Python, React, etc.</p>
+                <p>Brief description of your project and what you built.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p><a href="tel:+1(555)123-4567">+1 (555) 123-4567</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>LinkedIn</h3>
+                <p><a href="https://linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>Mailing Address</h3>
+                <p>123 Main Street<br>City, State 12345<br>USA</p>
+            </div>
         </div>
     </section>
 
