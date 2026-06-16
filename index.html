@@ -95,36 +95,53 @@
             margin-top: 20px;
         }
         .project-card {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-            border: 1px solid #06b6d4;
-            padding: 25px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 28px;
+            border-radius: 18px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.2);
         }
         .project-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
-            border-color: #0891b2;
+            box-shadow: 0 18px 35px rgba(6, 182, 212, 0.18);
+            border-color: #38bdf8;
         }
         .project-card h3 {
-            color: #06b6d4;
+            color: #7dd3fc;
             margin-top: 0;
+            font-size: 1.3rem;
+        }
+        .project-card .project-label {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 6px 12px;
+            background: rgba(56, 189, 248, 0.12);
+            color: #7dd3fc;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
         }
         .project-tech {
             color: #94a3b8;
-            font-size: 0.9rem;
-            margin: 10px 0;
+            font-size: 0.95rem;
+            margin: 12px 0;
+        }
+        .project-card p {
+            color: #cbd5e1;
+            line-height: 1.7;
         }
         .project-link {
             display: inline-block;
-            margin-top: 15px;
-            padding: 8px 16px;
-            background: #06b6d4;
+            margin-top: 18px;
+            padding: 12px 18px;
+            background: #22d3ee;
             color: #0f172a;
             text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: background 0.25s ease, transform 0.25s ease;
         }
         .project-link:hover {
             background: #0891b2;
@@ -208,16 +225,18 @@
     <section id="projects">
         <h2>Projects</h2>
         <p style="max-width: 900px; margin: 0 auto 20px; color: #cbd5e1;">
-            These project cards identify the work I have completed and include direct links so viewers can open each analysis. Each card shows the project name, the technologies used, a short summary, and a link to view the full project.
+            These project cards identify the data analysis work I have completed and include direct links so viewers can inspect each analysis. Each card includes the project name, industry context, technologies used, and a short summary of the results.
         </p>
         <div class="projects-grid">
             <div class="project-card">
+                <div class="project-label">Retail / Customer Behavior</div>
                 <h3>Instacart Customer Behavior EDA</h3>
                 <p class="project-tech">Technologies: Python, pandas, matplotlib, seaborn, Jupyter</p>
                 <p>Explored an Instacart customer behavior dataset to identify purchasing patterns and basket trends. I cleaned the data, analyzed order frequency and product preferences, and created visuals to explain customer segmentation. This analysis provides actionable insights for optimizing promotions and improving customer retention.</p>
                 <a href="https://tripleten.com/proxy/pierce/trainers/workspace/shares/2e0913da-3645-4b5e-bdae-885db80a0fdb%3A200016736%3Aaiml/archive" class="project-link" target="_blank" rel="noopener noreferrer">View Instacart Analysis</a>
             </div>
             <div class="project-card">
+                <div class="project-label">Telecom / Revenue Analysis</div>
                 <h3>Megaline Phone Revenue Analysis</h3>
                 <p class="project-tech">Technologies: Python, pandas, scikit-learn, plotly, Jupyter</p>
                 <p>Analyzed Megaline Phone company revenue and customer behavior across phone plans to reveal key drivers of profitability. I examined plan usage, churn risk, and revenue per customer while generating clear statistical summaries. The findings help inform pricing strategy and identify high-value customer segments.</p>
